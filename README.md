@@ -67,3 +67,8 @@ The script is codified to use **--dry-run** to ideally simulate what folders wil
 3. If we want to add an additional requirement of deleting deploys older than 30 days while keeping X deployments. What additional changes would you need to make in the script?
 
 * The logic would like something like modifying the main() function to calculate the creation date of each deployment folder and compare it with the current date. If the difference between the two dates is greater than 30 days, then the deployment folder should be deleted.
+
+### Scope for Improvements
+* Remove hard-coded bucket name. Can be passed in as a parameter or specify a list of buckets so the script is re-usable. 
+* Write better unit tests
+* Integrate with a CI/CD system like Jenkins or GitLab
